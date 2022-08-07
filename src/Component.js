@@ -36,7 +36,9 @@ const Component = ({ data, components, path }) => {
       >
         View Details / Open Modal
       </button>
-      {modalOpen && <Modal setOpenModal={setModalOpen} />}
+      {modalOpen && (
+        <Modal setOpenModal={setModalOpen} data={data.id} component={component.content} />
+      )}
     </div>
   );
 };
