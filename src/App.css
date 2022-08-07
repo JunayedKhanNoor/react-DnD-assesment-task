@@ -68,11 +68,21 @@ body {
 }
 
 .component {
-  height: 60px;
-  padding: 10px;
-  background: #aaa;
+  height: 85px;
+  text-align: center;
 }
-
+.btn {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  border: #051937;
+  background-image: linear-gradient(to right, #0093c3, #00d381);
+  font-weight: bold;
+  font-size: larger;
+}
+.btn:hover {
+  background-image: linear-gradient(to left, #0093c3, #00d381);
+}
 .column {
   border: 1px solid blue;
   flex: 1 1 100%;
@@ -126,4 +136,9 @@ body {
 #sideBar {
   text-align: center;
   text-transform: uppercase;
+}
+@media screen and (max-width: 480px) {
+  .btn {
+    width: 100vw;
+  }
 }

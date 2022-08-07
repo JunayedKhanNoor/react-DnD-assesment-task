@@ -4,7 +4,7 @@ import { COMPONENT } from './constants';
 
 const style = {
   border: '1px dashed black',
-  padding: '0.5rem 1rem',
+  padding: '1rem 1rem',
   backgroundColor: 'white',
   cursor: 'move',
 };
@@ -28,6 +28,7 @@ const Component = ({ data, components, path }) => {
     <div ref={ref} style={{ ...style, opacity }} className="component draggable">
       <div>{data.id}</div>
       <div>{component.content}</div>
+      <button className="btn">View Details / Open Modal</button>
     </div>
   );
 };
