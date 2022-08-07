@@ -91,7 +91,6 @@ body {
 
 .columns {
   display: flex;
-  padding: 20px 0;
 }
 
 .columnContainer {
@@ -115,8 +114,8 @@ body {
   text-align: center;
   padding: 20px 0;
   margin: 0 auto;
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
   border: 7px solid aquamarine;
   display: flex;
   align-items: center;

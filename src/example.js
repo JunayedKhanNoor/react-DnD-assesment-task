@@ -97,8 +97,6 @@ const Container = () => {
     );
   };
 
-  // dont use index for key when mapping over items
-  // causes this issue - https://github.com/react-dnd/react-dnd/issues/342
   return (
     <div className="body">
       <div className="sideBar">
