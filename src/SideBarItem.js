@@ -1,9 +1,9 @@
 import React from 'react';
 import { useDrag } from 'react-dnd';
-
+import { SIDEBAR_ITEM } from './constants';
 const SideBarItem = ({ data }) => {
   const [{ opacity }, drag] = useDrag({
-    type: 'BOX',
+    type: SIDEBAR_ITEM,
     item: data,
     collect: (monitor) => ({
       opacity: monitor.isDragging() ? 0.4 : 1,

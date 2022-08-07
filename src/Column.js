@@ -9,7 +9,7 @@ const Column = ({ data, components, handleDrop, path }) => {
   const ref = useRef(null);
 
   const [{ isDragging }, drag] = useDrag({
-    type: 'BOX',
+    type: COLUMN,
     item: {
       type: COLUMN,
       id: data.id,

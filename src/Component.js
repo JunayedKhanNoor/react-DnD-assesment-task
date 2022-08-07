@@ -12,7 +12,7 @@ const Component = ({ data, components, path }) => {
   const ref = useRef(null);
 
   const [{ isDragging }, drag] = useDrag({
-    type: 'BOX',
+    type: COMPONENT,
     item: { type: COMPONENT, id: data.id, path },
     collect: (monitor) => ({
       isDragging: monitor.isDragging(),
