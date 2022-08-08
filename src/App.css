@@ -84,7 +84,6 @@ body {
   background-image: linear-gradient(to left, #0093c3, #00d381);
 }
 .column {
-  border: 1px solid blue;
   flex: 1 1 100%;
   padding: 10px;
 }
@@ -145,6 +144,9 @@ body {
   background-color: lightpink;
   border: solid aquamarine 1px;
   border-radius: 10px;
+  padding: 10px;
+  resize: horizontal;
+  overflow: auto;
 }
 
 #navbar {

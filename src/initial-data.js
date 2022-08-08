@@ -58,10 +58,6 @@ const initialData = {
               type: COMPONENT,
               id: 'component0',
             },
-            {
-              type: COMPONENT,
-              id: 'component2',
-            },
           ],
         },
       ],

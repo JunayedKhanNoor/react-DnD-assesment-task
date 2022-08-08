@@ -4,6 +4,7 @@ import { COLUMN } from './constants';
 import DropZone from './DropZone';
 import Component from './Component';
 
+const style = {};
 const Column = ({ data, components, handleDrop, path }) => {
   const ref = useRef(null);
 
@@ -28,54 +29,37 @@ const Column = ({ data, components, handleDrop, path }) => {
       <Component key={component.id} data={component} components={components} path={currentPath} />
     );
   };
-  const [size, setSize] = useState({ x: 300, y: 500 });
 
-  const style = { width: size.x, height: size.y };
-  const handler = (mouseDownEvent) => {
-    const startSize = size;
-    const startPosition = { x: mouseDownEvent.pageX, y: mouseDownEvent.pageY };
-
-    function onMouseMove(mouseMoveEvent) {
-      setSize((currentSize) => ({
-        x: startSize.x - startPosition.x + mouseMoveEvent.pageX,
-      }));
-    }
-    document.body.addEventListener('mousemove', onMouseMove);
-  };
   return (
-    <div
-      id="containerD"
-      ref={ref}
-      style={{ ...style, opacity }}
-      className="base draggable column"
-      onMouseMove={handler}
-    >
-      {data.id}
-      {data.children.map((component, index) => {
-        const currentPath = `${path}-${index}`;
+    <section className="base draggable column">
+      <div id="containerD" style={{ ...style, opacity }} ref={ref}>
+        {data.id}
+        {data.children.map((component, index) => {
+          const currentPath = `${path}-${index}`;
 
-        return (
-          <React.Fragment key={component.id} id="draghandle">
-            <DropZone
-              data={{
-                path: currentPath,
-                childrenCount: data.children.length,
-              }}
-              onDrop={handleDrop}
-            />
-            {renderComponent(component, currentPath)}
-          </React.Fragment>
-        );
-      })}
-      <DropZone
-        data={{
-          path: `${path}-${data.children.length}`,
-          childrenCount: data.children.length,
-        }}
-        onDrop={handleDrop}
-        isLast
-      />
-    </div>
+          return (
+            <React.Fragment key={component.id} id="draghandle">
+              <DropZone
+                data={{
+                  path: currentPath,
+                  childrenCount: data.children.length,
+                }}
+                onDrop={handleDrop}
+              />
+              {renderComponent(component, currentPath)}
+            </React.Fragment>
+          );
+        })}
+        <DropZone
+          data={{
+            path: `${path}-${data.children.length}`,
+            childrenCount: data.children.length,
+          }}
+          onDrop={handleDrop}
+          isLast
+        />
+      </div>
+    </section>
   );
 };
 export default Column;
