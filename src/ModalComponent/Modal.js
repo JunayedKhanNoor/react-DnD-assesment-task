@@ -18,7 +18,7 @@ const Modal = ({ setOpenModal, data, component }) => {
           <h1>FROM: {component}</h1>
         </div>
         <div className="body">
-          <p>Wow 😲 looks amazing. Hope you want to go there!</p>
+          <p>Wow 😲 looks amazing. Assessment Task of Junayed !</p>
         </div>
         <div className="footer">
           <button
@@ -29,7 +29,7 @@ const Modal = ({ setOpenModal, data, component }) => {
           >
             Cancel
           </button>
-          <button>Continue</button>
+          <button className="btn">Submit</button>
         </div>
       </div>
     </div>

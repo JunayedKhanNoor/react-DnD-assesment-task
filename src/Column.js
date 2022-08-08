@@ -32,13 +32,13 @@ const Column = ({ data, components, handleDrop, path }) => {
 
   return (
     <section className="base draggable column">
-      <div id="containerD" style={{ ...style, opacity }} ref={ref}>
+      <div id="containerResize" style={{ ...style, opacity }} ref={ref}>
         {data.id}
         {data.children.map((component, index) => {
           const currentPath = `${path}-${index}`;
 
           return (
-            <React.Fragment key={component.id} id="draghandle">
+            <React.Fragment key={component.id}>
               <DropZone
                 data={{
                   path: currentPath,
