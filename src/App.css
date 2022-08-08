@@ -141,3 +141,15 @@ body {
     width: 100vw;
   }
 }
+#containerD {
+  position: relative;
+  background-color: lightpink;
+  border: solid red 1px;
+}
+
+#draghandle {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translate(50%, 50%);
+}
