@@ -30,6 +30,16 @@ const initialData = {
             },
           ],
         },
+        {
+          type: COLUMN,
+          id: 'column3',
+          children: [
+            {
+              type: COMPONENT,
+              id: 'component3',
+            },
+          ],
+        },
       ],
     },
     {
