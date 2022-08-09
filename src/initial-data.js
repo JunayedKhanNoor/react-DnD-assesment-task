@@ -70,6 +70,8 @@ const initialData = {
     component3: { id: 'component3', type: 'name', content: 'Some name' },
     component4: { id: 'component4', type: 'phone', content: 'Some phone' },
     component5: { id: 'component5', type: 'image', content: 'Some image' },
+    component6: { id: 'component6', type: 'row', content: 'Draggable Item' },
+    component7: { id: 'component7', type: 'column', content: 'Draggable Item' },
   },
 };
 
